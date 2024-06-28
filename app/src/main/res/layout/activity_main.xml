@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvConsumo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/consumo_combustivel_1"
+        app:layout_constraintBottom_toBottomOf="@+id/consumo1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/consumo1" />
+
+    <TextView
+        android:id="@+id/tvConsumo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/consumo_combustivel_2"
+        app:layout_constraintBottom_toBottomOf="@+id/consumo2"
+        app:layout_constraintStart_toStartOf="@+id/tvConsumo1"
+        app:layout_constraintTop_toTopOf="@+id/consumo2" />
+
+    <TextView
+        android:id="@+id/tvValor1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_litro_combustivel_1"
+        app:layout_constraintBottom_toBottomOf="@+id/valor1"
+        app:layout_constraintStart_toStartOf="@+id/tvConsumo2"
+        app:layout_constraintTop_toTopOf="@+id/valor1" />
+
+    <TextView
+        android:id="@+id/tvValor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/valor_litro_combustivel_2"
+        app:layout_constraintBottom_toBottomOf="@+id/valor2"
+        app:layout_constraintStart_toStartOf="@+id/tvValor1"
+        app:layout_constraintTop_toTopOf="@+id/valor2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/consumo1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintWidth_max="450dp"
+        app:layout_constraintEnd_toStartOf="@+id/btBuscarConsumo1"
+        app:layout_constraintStart_toEndOf="@+id/tvConsumo1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etConsumo1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberDecimal"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btBuscarConsumo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/buscar"
+        app:layout_constraintBottom_toBottomOf="@+id/consumo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/consumo1"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/consumo2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/consumo1"
+        app:layout_constraintStart_toStartOf="@+id/consumo1"
+        app:layout_constraintTop_toBottomOf="@+id/consumo1"
+        app:layout_constraintWidth_max="450dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etConsumo2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number|numberDecimal"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btBuscarConsumo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/buscar"
+        app:layout_constraintBottom_toBottomOf="@+id/consumo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/consumo2" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/valor1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/consumo2"
+        app:layout_constraintStart_toStartOf="@+id/consumo2"
+        app:layout_constraintTop_toBottomOf="@+id/consumo2"
+        app:layout_constraintWidth_max="450dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etValor1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/valor2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintWidth_max="450dp"
+        app:layout_constraintEnd_toEndOf="@+id/valor1"
+        app:layout_constraintStart_toStartOf="@+id/valor1"
+        app:layout_constraintTop_toBottomOf="@+id/valor1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etValor2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btMaisBarato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/o_mais_barato"
+        app:layout_constraintEnd_toEndOf="@+id/tvValor2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valor2" />
+
+    <TextView
+        android:id="@+id/tvMaisBarato"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btMaisBarato"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btMaisBarato"
+        app:layout_constraintTop_toTopOf="@+id/btMaisBarato" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

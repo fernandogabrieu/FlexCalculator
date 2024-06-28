@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">trabalhoFinalAndroidBasico</string>
+    <string name="buscar">Buscar</string>
+    <string name="consumo_combustivel_1">Consumo Combustível 1:</string>
+    <string name="consumo_combustivel_2">Consumo Combustível 2:</string>
+    <string name="valor_litro_combustivel_1">Valor Litro Combustível 1:</string>
+    <string name="valor_litro_combustivel_2">Valor Litro Combustível 2:</string>
+    <string name="o_mais_barato">O Mais Barato</string>
+    <string name="combustivel_mais_economico">Combustível %1$d é mais econômico</string>
+    <string name="preencha_todos_os_campos">Preencha todos os campos corretamente</string>
+</resources>
