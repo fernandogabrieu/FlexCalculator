@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "br.edu.utfpr.trabalhofinalandroidbasico"
+    namespace = "br.edu.utfpr.flexcalculator"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "br.edu.utfpr.trabalhofinalandroidbasico"
+        applicationId = "br.edu.utfpr.flexcalculator"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -25,6 +25,10 @@ android {
                 "proguard-rules.pro"
             )
         }
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

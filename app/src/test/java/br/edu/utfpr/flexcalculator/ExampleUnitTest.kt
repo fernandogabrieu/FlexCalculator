@@ -1,4 +1,4 @@
-package br.edu.utfpr.trabalhofinalandroidbasico
+package br.edu.utfpr.flexcalculator
 
 import org.junit.Test
 

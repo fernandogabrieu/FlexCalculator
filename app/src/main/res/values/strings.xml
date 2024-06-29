@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">trabalhoFinalAndroidBasico</string>
+    <string name="app_name">FlexCalculator</string>
     <string name="buscar">Buscar</string>
     <string name="consumo_combustivel_1">Consumo Combustível 1:</string>
     <string name="consumo_combustivel_2">Consumo Combustível 2:</string>
