@@ -1,6 +1,7 @@
 package br.edu.utfpr.flexcalculator
 
 import android.content.Intent
+import android.icu.text.DecimalFormat
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -39,13 +40,14 @@ class MainActivity : AppCompatActivity() {
             binding.tvMaisBarato.error = null
             val resultado1 = valor1 / consumo1
             val resultado2 = valor2 / consumo2
+            val df = DecimalFormat("0.00")
 
-            val melhorCombustivel: String = if (resultado1 < resultado2) {
-                getString(R.string.combustivel_mais_economico, 1)
+            val resumo: String = if (resultado1 < resultado2) {
+                "Abasteça com o combustível 1!\nCusto por KM: R$ " + df.format(resultado1) + "\n\nCombustível 2\nCusto por KM: R$ " + df.format(resultado2)
             } else {
-                getString(R.string.combustivel_mais_economico, 2)
+                "Abasteça com o combustível 2!\nEle custa R$ " + df.format(resultado2) + " por KM, enquanto o combustível 1 custa R$ " + df.format(resultado1) + " por KM."
             }
-            binding.tvMaisBarato.text = melhorCombustivel
+            binding.tvMaisBarato.text = resumo
         } else {
             binding.tvMaisBarato.text = getString(R.string.preencha_todos_os_campos)
             binding.tvMaisBarato.error = getString(R.string.preencha_todos_os_campos)
