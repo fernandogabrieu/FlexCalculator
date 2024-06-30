@@ -8,4 +8,5 @@
     <string name="o_mais_barato">O Mais Barato</string>
     <string name="combustivel_mais_economico">Combustível %1$d é mais econômico</string>
     <string name="preencha_todos_os_campos">Preencha todos os campos corretamente</string>
+    <string name="consumo_padrao">Consumo padrão</string>
 </resources>
