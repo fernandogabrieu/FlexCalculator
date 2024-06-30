@@ -7,43 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tvConsumo1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/consumo_combustivel_1"
-        app:layout_constraintBottom_toBottomOf="@+id/consumo1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/consumo1" />
-
-    <TextView
-        android:id="@+id/tvConsumo2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/consumo_combustivel_2"
-        app:layout_constraintBottom_toBottomOf="@+id/consumo2"
-        app:layout_constraintStart_toStartOf="@+id/tvConsumo1"
-        app:layout_constraintTop_toTopOf="@+id/consumo2" />
-
-    <TextView
-        android:id="@+id/tvValor1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/valor_litro_combustivel_1"
-        app:layout_constraintBottom_toBottomOf="@+id/valor1"
-        app:layout_constraintStart_toStartOf="@+id/tvConsumo2"
-        app:layout_constraintTop_toTopOf="@+id/valor1" />
-
-    <TextView
-        android:id="@+id/tvValor2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/valor_litro_combustivel_2"
-        app:layout_constraintBottom_toBottomOf="@+id/valor2"
-        app:layout_constraintStart_toStartOf="@+id/tvValor1"
-        app:layout_constraintTop_toTopOf="@+id/valor2" />
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/consumo1"
         android:layout_width="0dp"
@@ -51,9 +14,11 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintWidth_max="450dp"
+        android:hint="Consumo usando gasolina"
+        app:suffixText="Km/L"
+        app:startIconDrawable="@drawable/ic_gas"
         app:layout_constraintEnd_toStartOf="@+id/btBuscarConsumo1"
-        app:layout_constraintStart_toEndOf="@+id/tvConsumo1"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -80,6 +45,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:hint="Consumo usando etanol"
+        app:suffixText="Km/L"
+        app:startIconDrawable="@drawable/ic_gas"
         app:layout_constraintEnd_toEndOf="@+id/consumo1"
         app:layout_constraintStart_toStartOf="@+id/consumo1"
         app:layout_constraintTop_toBottomOf="@+id/consumo1"
@@ -108,6 +76,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:hint="Qual o valor da gasolina?"
+        app:prefixText="R$ "
+        app:startIconDrawable="@drawable/ic_cash"
         app:layout_constraintEnd_toEndOf="@+id/consumo2"
         app:layout_constraintStart_toStartOf="@+id/consumo2"
         app:layout_constraintTop_toBottomOf="@+id/consumo2"
@@ -126,6 +97,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:hint="Qual o valor do etanol?"
+        app:prefixText="R$ "
+        app:startIconDrawable="@drawable/ic_cash"
         app:layout_constraintWidth_max="450dp"
         app:layout_constraintEnd_toEndOf="@+id/valor1"
         app:layout_constraintStart_toStartOf="@+id/valor1"
@@ -145,8 +119,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/o_mais_barato"
-        app:layout_constraintEnd_toEndOf="@+id/tvValor2"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/valor2"
         app:layout_constraintTop_toBottomOf="@+id/valor2" />
 
     <TextView
@@ -156,6 +129,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btMaisBarato"
         app:layout_constraintTop_toBottomOf="@+id/valor2" />

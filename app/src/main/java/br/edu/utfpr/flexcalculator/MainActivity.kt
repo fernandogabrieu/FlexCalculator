@@ -43,9 +43,9 @@ class MainActivity : AppCompatActivity() {
             val df = DecimalFormat("0.00")
 
             val resumo: String = if (resultado1 < resultado2) {
-                "Abasteça com o combustível 1!\nCusto por KM: R$ " + df.format(resultado1) + "\n\nCombustível 2\nCusto por KM: R$ " + df.format(resultado2)
+                "Abasteça com Gasolina!\n\nA gasolina está custando R$" + df.format(resultado1) + " por Km, enquando o etanol está custando R$" + df.format(resultado2) + " por Km."
             } else {
-                "Abasteça com o combustível 2!\nEle custa R$ " + df.format(resultado2) + " por KM, enquanto o combustível 1 custa R$ " + df.format(resultado1) + " por KM."
+                "Abasteça com Etanol!\n\nO etanol está custando R$" + df.format(resultado2) + " por Km, enquanto a gasolina está custando R$" + df.format(resultado1) + " por Km."
             }
             binding.tvMaisBarato.text = resumo
         } else {
