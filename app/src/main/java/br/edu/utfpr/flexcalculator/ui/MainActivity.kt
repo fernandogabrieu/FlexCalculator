@@ -1,10 +1,11 @@
-package br.edu.utfpr.flexcalculator
+package br.edu.utfpr.flexcalculator.ui
 
 import android.content.Intent
 import android.icu.text.DecimalFormat
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import br.edu.utfpr.flexcalculator.R
 import br.edu.utfpr.flexcalculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +29,15 @@ class MainActivity : AppCompatActivity() {
         binding.btMaisBarato.setOnClickListener{
             btMaisBaratoOnClick()
         }
+
+        binding.cars.setOnClickListener {
+            btCarsOnClick()
+        }
+    }
+
+    private fun btCarsOnClick() {
+        val intent = Intent(this, CarroActivity::class.java)
+        startActivity(intent)
     }
 
     private fun btMaisBaratoOnClick() {

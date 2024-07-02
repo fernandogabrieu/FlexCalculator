@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CadastroCarroActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cadastroNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCadastroNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cadastroMarca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/cadastroNome"
+        app:layout_constraintEnd_toEndOf="@id/cadastroNome"
+        app:layout_constraintTop_toBottomOf="@id/cadastroNome">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCadastroMarca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Marca" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cadastroModelo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/cadastroMarca"
+        app:layout_constraintEnd_toEndOf="@id/cadastroMarca"
+        app:layout_constraintTop_toBottomOf="@id/cadastroMarca">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCadastroModelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Modelo" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cadastroConsumoGasolina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:suffixText="Km/L"
+        app:layout_constraintStart_toStartOf="@id/cadastroModelo"
+        app:layout_constraintTop_toBottomOf="@id/cadastroModelo"
+        app:layout_constraintEnd_toStartOf="@id/cadastroConsumoEtanol">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCadastroConsumoGasolina"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Consumo Gasolina" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cadastroConsumoEtanol"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:suffixText="Km/L"
+        app:layout_constraintStart_toEndOf="@id/cadastroConsumoGasolina"
+        app:layout_constraintEnd_toEndOf="@id/cadastroModelo"
+        app:layout_constraintTop_toBottomOf="@id/cadastroModelo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etCadastroConsumoEtanol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Consumo Etanol" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        app:layout_constraintTop_toBottomOf="@id/cadastroConsumoGasolina"
+        app:layout_constraintEnd_toStartOf="@id/btLimpar"
+        app:layout_constraintStart_toStartOf="@id/cadastroConsumoGasolina"/>
+
+    <Button
+        android:id="@+id/btLimpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Limpar"
+        app:layout_constraintTop_toBottomOf="@id/cadastroConsumoEtanol"
+        app:layout_constraintEnd_toEndOf="@id/cadastroConsumoEtanol"
+        app:layout_constraintStart_toEndOf="@id/btSalvar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

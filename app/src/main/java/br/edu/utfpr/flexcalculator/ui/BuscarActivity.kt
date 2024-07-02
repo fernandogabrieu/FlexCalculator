@@ -1,4 +1,4 @@
-package br.edu.utfpr.flexcalculator
+package br.edu.utfpr.flexcalculator.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle

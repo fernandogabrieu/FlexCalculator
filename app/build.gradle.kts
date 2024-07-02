@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("org.jetbrains.kotlin.kapt")
 }
 
 android {
@@ -48,5 +49,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(libs.androidx.espresso.core)//Room
+    implementation(libs.androidx.room.runtime)
+    kapt(libs.androidx.room.compiler) // Para gerar o código automaticamente
+    implementation(libs.androidx.room.ktx) // Suporte a corrotinas
 }
